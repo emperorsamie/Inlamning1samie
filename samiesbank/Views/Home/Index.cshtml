@@ -2,7 +2,26 @@
     ViewData["Title"] = "Samies Bank";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    <div class="text-center">
+        <h1 class="display-4">Samies bank</h1>
+
+        @foreach (var customer in Model)
+        {
+    <ul>
+        <li>
+            <p>Kundnummer: @customer.CustomerId</p>
+            <p>Kund: @customer.Name</p>
+             @foreach (var account in customer.Accounts)
+                {
+                    <li>
+                        <p>Kontonummer: @account.AccountId</p>
+                        <p>Saldo: @account.Balance</p>
+                    </li>
+                }
+        </li>
+
+    </ul>
+        }
+
+    </div>
+    
