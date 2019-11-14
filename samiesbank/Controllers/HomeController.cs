@@ -12,7 +12,8 @@ namespace samiesbank.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = BankRepository.GetCustomers();
+            return View(model);
         }
 
         public IActionResult Privacy()
