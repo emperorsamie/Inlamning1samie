@@ -1,3 +1,4 @@
-Detta projekt är en del av inlämningsuppgift 1 för ALM-kursen.
+Detta projekt Ã¤r en del av inlÃ¤mningsuppgift 1 fÃ¶r ALM-kursen.
 
-Ägare: Samie Shaya Övriga gruppmedlemmar: Robert Tadjer
+Ã„gare: Samie Shaya
+Ã–vriga gruppmedlemmar: Robert Tadjer
