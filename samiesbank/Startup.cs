@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using samiesbank.Models;
 
 namespace samiesbank
 {
@@ -59,6 +60,39 @@ namespace samiesbank
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            var customers = CreateCustomers();
+            BankRepository.AddCustomers(customers);
         }
+        public List<Customer> CreateCustomers()
+        {
+            var customers = new List<Customer>() {
+                CreateCustomer(1, "Samie"),
+                CreateCustomer(2, "Robert"),
+                CreateCustomer(3, "Michael"),
+                CreateCustomer(4, "Tom"),
+                CreateCustomer(5, "Fredrik")
+            };
+            return customers;
+        }
+
+        private Customer CreateCustomer(int id, string name)
+        {
+            var customer = new Customer()
+            {
+                CustomerId = id,
+                Name = name,
+                Accounts = new List<Account>()
+                {
+                    new Account()
+                    {
+                        AccountId = id,
+                        Balance = 2451.64M
+                    }
+                }
+            };
+            return customer;
+        }
+
     }
 }
