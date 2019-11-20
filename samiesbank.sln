@@ -10,8 +10,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "samiesbank.Tests", "samiesb
 		{9C04BBBB-D23A-4449-8F18-0C3B5492E6CC} = {9C04BBBB-D23A-4449-8F18-0C3B5492E6CC}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "samiesbank.tests", "samiesbank.tests\samiesbank.tests.csproj", "{2BBC7586-4AE4-4C65-885B-024033ADD900}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
